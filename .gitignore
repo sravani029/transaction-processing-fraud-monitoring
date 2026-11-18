@@ -1,0 +1,34 @@
+# Secrets
+.env
+*.pem
+*.key
+
+# Java / Maven
+target/
+*.class
+*.jar
+!.mvn/wrapper/maven-wrapper.jar
+
+# IDEs
+.idea/
+*.iml
+.vscode/
+.classpath
+.project
+.settings/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Python (fraud-service, later)
+__pycache__/
+*.pyc
+.venv/
+venv/
+.ipynb_checkpoints/
+fraud-service/data/*.csv
+
+# Node (frontend, later)
+node_modules/
+dist/

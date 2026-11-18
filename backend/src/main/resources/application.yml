@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: txn-platform
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/txn_platform}
+    username: ${DB_USER:txn_user}
+    password: ${DB_PASSWORD:}          # never commit a real password; supply via environment
+  jpa:
+    open-in-view: false                # avoid lazy-loading surprises in the web layer
+    hibernate:
+      ddl-auto: validate               # Flyway owns the schema, Hibernate only checks it
+    properties:
+      hibernate:
+        jdbc:
+          time_zone: UTC
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+
+server:
+  port: ${PORT:8080}
+  shutdown: graceful
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      probes:
+        enabled: true
