@@ -6,7 +6,7 @@ No real card data or real money is involved.
 
 ## Status
 - [x] Phase 0: setup
-- [ ] Phase 1+: see roadmap below
+- [ ] Phase 1+: ongoing
 
 ## Tech
 Java 21, Spring Boot 4.1, PostgreSQL 17, Flyway, Docker. (Redis, Kafka, Python/scikit-learn, React are added in later phases.)
